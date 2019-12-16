@@ -27,6 +27,13 @@ android {
             version "3.10.2"
         }
     }
+
+
+    flavorDimensions "stl_mode"
+    productFlavors {
+        StaticCpp.dimension = "stl_mode"
+        SharedCpp.dimension = "stl_mode"
+    }
 }
 
 dependencies {
@@ -36,4 +43,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(path: ':mmkv')
 }

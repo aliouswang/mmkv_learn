@@ -19,6 +19,10 @@ add_library( # Sets the name of the library.
              # Provides a relative path to your source file(s).
              src/main/cpp/MMKV.h
              src/main/cpp/MMKV.cpp
+             src/main/cpp/native_bridge.h
+             src/main/cpp/native_bridge.cpp
+             src/main/cpp/MMKVLog.h
+             src/main/cpp/MMKVLog.cpp
              )
 
 # Searches for a specified prebuilt library and stores the path as a

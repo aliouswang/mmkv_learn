@@ -134,15 +134,29 @@ namespace mmkv {
     }
 
 
+    MMKV_JNI jboolean encodeString(JNIEnv *env, jobject obj, jlong handle, jstring okey, jstring ovalue) {
+        MMKV *kv = reinterpret_cast<MMKV *>(handle);
+        if (kv && okey) {
+            string key = jstring2string(env, okey);
+            if (ovalue) {
+                string value = jstring2string(env, ovalue);
+
+            }
+        }
+        return (jboolean) true;
+    }
+
 }
 
+//"(J" + S + S + ")V"
 
-
+#define S "Ljava/lang/String;"
 static JNINativeMethod g_methods[] = {
         {"jniInitialize", "(Ljava/lang/String;I)Ljava/lang/String;", (void *) mmkv::jniInitialize},
         {"getDefaultMMKV", "()J", (void *) mmkv::getDefaultMMKV},
         {"put", "(JLjava/lang/String;Ljava/lang/String;)V", (void *) mmkv::put},
         {"get", "(JLjava/lang/String;)Ljava/lang/String;", (void *) mmkv::get},
+        {"encodeString", "(JLjava/lang/String;Ljava/lang/String;)Z", (void *) mmkv::encodeString},
 };
 
 static int registerNativeMethods(JNIEnv *env, jclass cls) {

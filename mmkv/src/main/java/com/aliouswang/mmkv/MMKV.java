@@ -38,4 +38,6 @@ public class MMKV {
 
     private native String get(long handle, String key);
 
+    private native boolean encodeString(long handle, String key, String value);
+
 }

@@ -23,6 +23,23 @@ add_library( # Sets the name of the library.
              src/main/cpp/native_bridge.cpp
              src/main/cpp/MMKVLog.h
              src/main/cpp/MMKVLog.cpp
+        src/main/cpp/MMBuffer.h
+        src/main/cpp/MMBuffer.cpp
+        src/main/cpp/PBUtility.h
+        src/main/cpp/PBUtility.cpp
+        src/main/cpp/PBEncodeItem.hpp
+        src/main/cpp/CodedInputData.h
+        src/main/cpp/CodedInputData.cpp
+        src/main/cpp/CodedOutputData.h
+        src/main/cpp/CodedOutputData.cpp
+        src/main/cpp/MiniPBCoder.h
+        src/main/cpp/MiniPBCoder.cpp
+        src/main/cpp/ScopedLock.hpp
+        src/main/cpp/ThreadLock.h
+        src/main/cpp/ThreadLock.cpp
+
+        src/main/cpp/InterProcessLock.h
+        src/main/cpp/InterProcessLock.cpp
              )
 
 # Searches for a specified prebuilt library and stores the path as a
